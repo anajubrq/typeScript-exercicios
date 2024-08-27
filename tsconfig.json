@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es2016",
+      "module": "commonjs",
+      "rootDir": "./questoes-facil/origem",  // Ajuste conforme o local correto
+      "outDir": "./questoes-facil/build",
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "skipLibCheck": true
+    },
+    "include": [
+      "questoes-facil/origem/**/*"
+    ]
+  }
+  
+  
