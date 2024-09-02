@@ -2,13 +2,13 @@
 Tarefa: Crie uma função que receba um array de alunos e retorne um novo array com os alunos ordenados por nota, do maior para o menor.*/
 
 
-interface aLunos {
+interface ALunos {
     nome: string;
     nota: number;
   }
   
  
-  const alunos: aLunos[] = [
+  const alunos: ALunos[] = [
     { nome: 'João', nota: 6.75 },
     { nome: 'Maria', nota: 7 },
     { nome: 'Ana', nota: 8.50 },
@@ -19,7 +19,7 @@ interface aLunos {
   ];
   
   
-  function ordemDecrescente(alunos: aLunos[]): aLunos[] {
+  function ordemDecrescente(alunos: ALunos[]): ALunos[] {
     return alunos.slice().sort((a, b) => b.nota - a.nota);
   }
   
