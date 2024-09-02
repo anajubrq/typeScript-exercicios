@@ -1,6 +1,6 @@
 /* Você está desenvolvendo um sistema de gestão de projetos onde cada projeto é representado por um objeto contendo o nome do projeto, a data de início, a data de término prevista, e uma lista de dependências. Cada dependência é outro projeto que deve ser concluído antes que o projeto atual possa começar.
 Tarefa: Crie uma função que receba um array de projetos e retorne uma lista ordenada de projetos de modo que cada projeto só apareça após todas as suas dependências terem sido concluídas. Se houver dependências cíclicas (projetos que dependem uns dos outros em um ciclo), a função deve detectá-las e lançar um erro apropriado.*/
-interface DadosProjeto {
+export interface DadosProjeto {
     nome: string;
     dataInicio: Date;
     dataTermino: Date;
@@ -80,7 +80,7 @@ const projetos: DadosProjeto[] = [
 
 
 
-function projetoSemDependencia(projetos: DadosProjeto[]): DadosProjeto[] {
+export function projetoSemDependencia(projetos: DadosProjeto[]): DadosProjeto[] {
     
     const semDependencia = projetos.filter(projeto => {
         

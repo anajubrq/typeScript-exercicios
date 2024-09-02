@@ -3,7 +3,7 @@ Tarefa: Crie uma função que receba um array de pedidos e retorne um novo array
 
 
 
-interface Dados {
+export interface Dados {
     comprador: string;
     valorTotal: number;
     data: Date;
@@ -11,15 +11,15 @@ interface Dados {
 
 const pedidos:Dados[]=[
     {comprador:'Ana',valorTotal:2070, data: new Date("2024-09-15")},
-    {comprador:'Ana',valorTotal:2070, data: new Date("2024-02-5")},
-    {comprador:'Ana',valorTotal:2070, data: new Date("2022-05-19")},
-    {comprador:'Ana',valorTotal:2070, data: new Date("2024-07-13")},
-    {comprador:'Ana',valorTotal:2070, data: new Date("2024-04-1")},
-    {comprador:'Ana',valorTotal:2070, data: new Date("2024-01-08")}
+    {comprador:'Bia',valorTotal:140, data: new Date("2024-02-5")},
+    {comprador:'Adriana',valorTotal:98, data: new Date("2022-05-19")},
+    {comprador:'João',valorTotal:308, data: new Date("2024-07-13")},
+    {comprador:'Carla',valorTotal:176, data: new Date("2024-04-1")},
+    {comprador:'Ricardo',valorTotal:875, data: new Date("2024-01-08")}
 ]
 
 
-function arrayPedidos(pedidos: Dados[]) {
+export function arrayPedidos(pedidos: Dados[]) {
     return pedidos.map(pedido => ({
         comprador: pedido.comprador,
         valorTotal: pedido.valorTotal

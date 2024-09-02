@@ -42,3 +42,5 @@ function valorTotal(cliente) {
     valorClientes.sort((a, b) => b.comprasTotal - a.comprasTotal);
     return valorClientes;
 }
+const result = valorTotal(clientes)
+console.log(result)

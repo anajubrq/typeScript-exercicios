@@ -1,19 +1,19 @@
 /*Contexto: Um sistema de streaming de filmes quer implementar uma recomendação baseada nos gêneros favoritos dos usuários. Cada usuário é representado por um objeto contendo nome, idade, e uma lista de gêneros favoritos. Cada filme é representado por um objeto com título, gênero, e avaliacao de avaliação.
 Tarefa: Crie uma função que receba um array de usuários e um array de filmes, e retorne um novo objeto onde as chaves são os nomes dos usuários e os valores são arrays de filmes recomendados, baseados nos gêneros favoritos de cada usuário. A lista de filmes deve ser ordenada pela avaliacao de avaliação.*/
 
-interface Usuarios {
+  export  interface Usuarios {
     nome: string;
     idade: number;
     generosFavoritos: string[];
 }
   
-  interface Filmes {
+ export interface Filmes {
     titulo: string;
     genero: string;
     avaliacao: number;
 }
   
-  interface Recomendacoes {
+  export interface Recomendacoes {
     [nome: string]: Filmes[];
 }
   
@@ -33,7 +33,7 @@ interface Usuarios {
     { titulo: 'O filho protegido', genero: 'Romance', avaliacao: 9.0 }
 ];
   
-function recomendarFilmes(usuarios: Usuarios[], filmes: Filmes[]): Recomendacoes {
+export function recomendarFilmes(usuarios: Usuarios[], filmes: Filmes[]): Recomendacoes {
     return usuarios.reduce((resultado: Recomendacoes, usuario: Usuarios) => {
       const filmesRecomendados = filmes
         .filter(filme => usuario.generosFavoritos.includes(filme.genero))

@@ -2,7 +2,7 @@
 Tarefa: Crie uma função que receba o array de itens do carrinho e retorne um objeto contendo o total de itens, o valor total do carrinho, e um resumo de categorias com a quantidade de itens em cada uma.*/
 
 
-  interface DadosCarrinho {
+  export interface DadosCarrinho {
     nome: string,
     preco:number,
     quantidade:number,
@@ -17,7 +17,7 @@ Tarefa: Crie uma função que receba o array de itens do carrinho e retorne um o
 ]
 
 
-function resumo(carrinho: DadosCarrinho[]) {
+export function resumo(carrinho: DadosCarrinho[]) {
 
     const totalItems = carrinho.reduce((acc, item) => acc + item.quantidade, 0);
     const valorTotal = carrinho.reduce((soma, item) => soma + (item.preco * item.quantidade), 0);

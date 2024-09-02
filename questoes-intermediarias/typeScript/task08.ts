@@ -1,12 +1,12 @@
 /* Contexto: Você está desenvolvendo um sistema CRM (Customer Relationship Management) onde cada cliente é representado por um objeto contendo nome, email, idade, e uma lista de compras feitas, sendo cada compra um objeto com data e valor.
 Tarefa: Crie uma função que receba o array de clientes e retorne um novo array onde cada cliente possui uma propriedade adicional "valorTotalCompras", que representa a soma de todos os valores de suas compras. Em seguida, ordene esse array de clientes pelo valor total de compras, do maior para o menor.*/
 
-interface dadosCompras {
+export interface dadosCompras {
     data: string;
     valor: number;
 }
 
-interface dadosClientes {
+export interface dadosClientes {
     nome: string;
     email: string;
     idade: number;
@@ -48,7 +48,7 @@ const clientes: dadosClientes[] = [
     },
 ];
 
-function valorTotal(cliente: dadosClientes[]): dadosClientes[] {
+export function valorTotal(cliente: dadosClientes[]): dadosClientes[] {
    
     const valorClientes = cliente.map(cliente => {
         const comprasTotal = cliente.compras.reduce((acc, compras) => acc + compras.valor, 0);
